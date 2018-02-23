@@ -9,6 +9,13 @@
 /* Begin PBXBuildFile section */
 		A539541B202704A6005C3FED /* FinancialManagementTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = A5395419202704A6005C3FED /* FinancialManagementTableViewCell.m */; };
 		A539541C202704A6005C3FED /* FinancialManagementTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = A539541A202704A6005C3FED /* FinancialManagementTableViewCell.xib */; };
+		A5438D162040403100F2A7D3 /* CCCycleScrollView.m in Sources */ = {isa = PBXBuildFile; fileRef = A5438D142040403100F2A7D3 /* CCCycleScrollView.m */; };
+		A5438D1D2040457200F2A7D3 /* cycle_image6.png in Resources */ = {isa = PBXBuildFile; fileRef = A5438D172040457100F2A7D3 /* cycle_image6.png */; };
+		A5438D1E2040457200F2A7D3 /* cycle_image3.png in Resources */ = {isa = PBXBuildFile; fileRef = A5438D182040457100F2A7D3 /* cycle_image3.png */; };
+		A5438D1F2040457200F2A7D3 /* cycle_image2.png in Resources */ = {isa = PBXBuildFile; fileRef = A5438D192040457100F2A7D3 /* cycle_image2.png */; };
+		A5438D202040457200F2A7D3 /* cycle_image1.png in Resources */ = {isa = PBXBuildFile; fileRef = A5438D1A2040457200F2A7D3 /* cycle_image1.png */; };
+		A5438D212040457200F2A7D3 /* cycle_image4.png in Resources */ = {isa = PBXBuildFile; fileRef = A5438D1B2040457200F2A7D3 /* cycle_image4.png */; };
+		A5438D222040457200F2A7D3 /* cycle_image5.png in Resources */ = {isa = PBXBuildFile; fileRef = A5438D1C2040457200F2A7D3 /* cycle_image5.png */; };
 		A56EB1B72025DF22004BAF5F /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = A56EB1B62025DF22004BAF5F /* AppDelegate.m */; };
 		A56EB1BA2025DF22004BAF5F /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A56EB1B92025DF22004BAF5F /* ViewController.m */; };
 		A56EB1BD2025DF22004BAF5F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A56EB1BB2025DF22004BAF5F /* Main.storyboard */; };
@@ -47,6 +54,14 @@
 		A5395418202704A6005C3FED /* FinancialManagementTableViewCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FinancialManagementTableViewCell.h; sourceTree = "<group>"; };
 		A5395419202704A6005C3FED /* FinancialManagementTableViewCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FinancialManagementTableViewCell.m; sourceTree = "<group>"; };
 		A539541A202704A6005C3FED /* FinancialManagementTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = FinancialManagementTableViewCell.xib; sourceTree = "<group>"; };
+		A5438D142040403100F2A7D3 /* CCCycleScrollView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CCCycleScrollView.m; sourceTree = "<group>"; };
+		A5438D152040403100F2A7D3 /* CCCycleScrollView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CCCycleScrollView.h; sourceTree = "<group>"; };
+		A5438D172040457100F2A7D3 /* cycle_image6.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = cycle_image6.png; sourceTree = "<group>"; };
+		A5438D182040457100F2A7D3 /* cycle_image3.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = cycle_image3.png; sourceTree = "<group>"; };
+		A5438D192040457100F2A7D3 /* cycle_image2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = cycle_image2.png; sourceTree = "<group>"; };
+		A5438D1A2040457200F2A7D3 /* cycle_image1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = cycle_image1.png; sourceTree = "<group>"; };
+		A5438D1B2040457200F2A7D3 /* cycle_image4.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = cycle_image4.png; sourceTree = "<group>"; };
+		A5438D1C2040457200F2A7D3 /* cycle_image5.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = cycle_image5.png; sourceTree = "<group>"; };
 		A56EB1B22025DF22004BAF5F /* CustomizedHome.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CustomizedHome.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A56EB1B52025DF22004BAF5F /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		A56EB1B62025DF22004BAF5F /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -197,6 +212,14 @@
 				A5395416202702AA005C3FED /* CommonFunctionTableViewCell */,
 				A56EB1E82025F906004BAF5F /* HomeTableViewController.h */,
 				A56EB1E92025F906004BAF5F /* HomeTableViewController.m */,
+				A5438D152040403100F2A7D3 /* CCCycleScrollView.h */,
+				A5438D142040403100F2A7D3 /* CCCycleScrollView.m */,
+				A5438D1A2040457200F2A7D3 /* cycle_image1.png */,
+				A5438D192040457100F2A7D3 /* cycle_image2.png */,
+				A5438D182040457100F2A7D3 /* cycle_image3.png */,
+				A5438D1B2040457200F2A7D3 /* cycle_image4.png */,
+				A5438D1C2040457200F2A7D3 /* cycle_image5.png */,
+				A5438D172040457100F2A7D3 /* cycle_image6.png */,
 			);
 			path = Home;
 			sourceTree = "<group>";
@@ -307,11 +330,17 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A5438D202040457200F2A7D3 /* cycle_image1.png in Resources */,
 				A539541C202704A6005C3FED /* FinancialManagementTableViewCell.xib in Resources */,
 				A56EB1F42026058C004BAF5F /* CommonFunctionsTableViewCell.xib in Resources */,
 				A56EB1C22025DF22004BAF5F /* LaunchScreen.storyboard in Resources */,
+				A5438D1D2040457200F2A7D3 /* cycle_image6.png in Resources */,
 				A56EB1F92026C13A004BAF5F /* MyCollectionViewCell.xib in Resources */,
 				A56EB1BF2025DF22004BAF5F /* Assets.xcassets in Resources */,
+				A5438D222040457200F2A7D3 /* cycle_image5.png in Resources */,
+				A5438D1E2040457200F2A7D3 /* cycle_image3.png in Resources */,
+				A5438D1F2040457200F2A7D3 /* cycle_image2.png in Resources */,
+				A5438D212040457200F2A7D3 /* cycle_image4.png in Resources */,
 				A56EB1BD2025DF22004BAF5F /* Main.storyboard in Resources */,
 				A56EB1EF2025FB24004BAF5F /* CarouselTableViewCell.xib in Resources */,
 			);
@@ -340,6 +369,7 @@
 			files = (
 				A56EB1EA2025F906004BAF5F /* HomeTableViewController.m in Sources */,
 				A56EB1F82026C13A004BAF5F /* MyCollectionViewCell.m in Sources */,
+				A5438D162040403100F2A7D3 /* CCCycleScrollView.m in Sources */,
 				A539541B202704A6005C3FED /* FinancialManagementTableViewCell.m in Sources */,
 				A56EB1BA2025DF22004BAF5F /* ViewController.m in Sources */,
 				A56EB1F32026058C004BAF5F /* CommonFunctionsTableViewCell.m in Sources */,

@@ -10,8 +10,10 @@
 #import "CarouselTableViewCell.h"
 #import "CommonFunctionsTableViewCell.h"
 #import "FinancialManagementTableViewCell.h"
+#import "CCCycleScrollView.h"
 
-@interface HomeTableViewController ()
+@interface HomeTableViewController ()<CCCycleScrollViewClickActionDeleage>
+@property (nonatomic, strong) CCCycleScrollView *cyclePlayView;
 
 @end
 
@@ -40,7 +42,7 @@
 #pragma mark - Table view data source
 
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
-    return 3;
+    return 2;
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
@@ -54,18 +56,18 @@
 
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
-    if (indexPath.section == 0) {
-        CarouselTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"CarouselTableViewCell" forIndexPath:indexPath];
-        return cell;
-    }
-    if(indexPath.section == 1) {
+//    if (indexPath.section == 0) {
+//        CarouselTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"CarouselTableViewCell" forIndexPath:indexPath];
+//        return cell;
+//    }
+    if(indexPath.section == 0) {
         CommonFunctionsTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"CommonFunctionsTableViewCell"];
         if (!cell) {
             cell = [[CommonFunctionsTableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:@"CommonFunctionsTableViewCell"];
             return cell;
         }
     }
-    if(indexPath.section == 2) {
+    if(indexPath.section == 1) {
         FinancialManagementTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"FinancialManagementTableViewCell" forIndexPath:indexPath];
         return cell;
     }
@@ -76,29 +78,35 @@
     return [self createHeadViewforSection:section];
 }
 
-//- (NSString *)tableView:(UITableView *)tableView titleForHeaderInSection:(NSInteger)section {
-//
-//}
+
 
 - (CGFloat)tableView:(UITableView *)tableView heightForHeaderInSection:(NSInteger)section {
-    return 30;
+    if (section == 0) {
+        return 200;
+    }
+    if (section == 1) {
+        return 30;
+    }
+    return 0;
 }
 
 - (UIView *)createHeadViewforSection:(NSInteger)section {
-    UIView *headView = [[UIView alloc] initWithFrame:CGRectMake(0, 0, ScreenWidth, 30)];
+    UIView *headView = [[UIView alloc] init];
     headView.backgroundColor = [UIColor whiteColor];
     headView.userInteractionEnabled = YES;
-    UILabel *label = [[UILabel alloc] initWithFrame:CGRectMake(10, 0, ScreenWidth - 100, 30)];
+    UILabel *label = [[UILabel alloc] init];
     label.lineBreakMode = NSLineBreakByWordWrapping;
     label.numberOfLines = 0;
     label.backgroundColor = [UIColor whiteColor];
 
     if (section == 0) {
-        return nil;
-    } else if (section == 1)
-    {
+        headView.frame = CGRectMake(0, 0, ScreenWidth, 200);
+        [headView addSubview:self.cyclePlayView];
+        label.frame = CGRectMake(10, headView.frame.size.height - 30, ScreenWidth - 100, 30);
         label.text = @"常用功能";
     } else {
+        headView.frame = CGRectMake(0, 0, ScreenWidth, 30);
+        label.frame = CGRectMake(10, 0, ScreenWidth - 100, 30);
         label.text = @"特色理财";
         UIButton *btn = [[UIButton alloc] initWithFrame:CGRectMake(ScreenWidth - 50, 0, 50 ,30)];
         [btn addTarget:self action:@selector(moreBtnClick) forControlEvents:UIControlEventTouchUpInside];
@@ -114,7 +122,22 @@
     NSLog(@"更多");
 }
 
+- (CCCycleScrollView *)cyclePlayView {
+    NSMutableArray *images = [[NSMutableArray alloc]init];
+    for (NSInteger i = 1; i <= 4; ++i) {
+        UIImage *image = [UIImage imageNamed:[NSString stringWithFormat:@"cycle_image%ld",(long)i]];
+        [images addObject:image];
+    }
+    _cyclePlayView = [[CCCycleScrollView alloc]initWithImages:images withFrame:CGRectMake(0, 0, ScreenWidth, 170)];
+//    self.cyclePlayView.pageDescrips = @[@"大海",@"花",@"长灯",@"阳光下的身影",@"秋树",@"摩天轮"];
+    _cyclePlayView.delegate = self;
+    _cyclePlayView.backgroundColor = [UIColor grayColor];
+    return _cyclePlayView;
+}
 
+- (void)cyclePageClickAction:(NSInteger)clickIndex {
+    NSLog(@"点击了第%ld个图片:%@",clickIndex,self.cyclePlayView.pageDescrips[clickIndex]);
+}
 
 
 @end
